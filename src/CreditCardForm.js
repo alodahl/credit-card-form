@@ -186,7 +186,7 @@ class CreditCardForm extends Component {
                 onChange={(e) => this.handleInput(e, "name")}
                 onBlur={(e)=> this.validateTypeOnBlur(e, "name")}
               />
-              <div className="validation-feedback">{this.state.feedback.name}</div>
+              <div className="validation-feedback" aria-live="assertive">{this.state.feedback.name}</div>
             </div>
             <div className="form-input-wrapper">
               <input
@@ -200,7 +200,7 @@ class CreditCardForm extends Component {
                 onChange={(e) => this.handleInput(e, "cardNumber")}
                 onBlur={(e)=> this.validateTypeOnBlur(e, "cardNumber")}
               />
-              <div className="validation-feedback">{this.state.feedback.cardNumber}</div>
+              <div className="validation-feedback" aria-live="assertive">{this.state.feedback.cardNumber}</div>
             </div>
             <div className="form-input-wrapper">
               <input
@@ -214,7 +214,7 @@ class CreditCardForm extends Component {
                 onChange={(e) => this.handleInput(e, "cvv2")}
                 onBlur={(e)=> this.validateTypeOnBlur(e, "cvv2")}
               />
-              <div className="validation-feedback">{this.state.feedback.cvv2}</div>
+              <div className="validation-feedback" aria-live="assertive">{this.state.feedback.cvv2}</div>
             </div>
             <div className="form-input-wrapper form-input--left inline">
               <input
@@ -228,7 +228,7 @@ class CreditCardForm extends Component {
                 onChange={(e) => this.handleInput(e, "expMonth")}
                 onBlur={(e)=> this.validateTypeOnBlur(e, "expMonth")}
               />
-              <div className="validation-feedback">{this.state.feedback.expMonth}</div>
+              <div className="validation-feedback" aria-live="assertive">{this.state.feedback.expMonth}</div>
             </div>
             <div className="form-input-wrapper form-input--right inline">
               <input
@@ -242,7 +242,7 @@ class CreditCardForm extends Component {
                 onChange={(e) => this.handleInput(e, "expYear")}
                 onBlur={(e)=> this.validateTypeOnBlur(e, "expYear")}
               />
-              <div className="validation-feedback">{this.state.feedback.expYear}</div>
+              <div className="validation-feedback" aria-live="assertive">{this.state.feedback.expYear}</div>
             </div>
             <img className="credit-card-photo" src={CreditCardsPhoto} alt="Visa and Mastercard Accepted"/>
           </div>
