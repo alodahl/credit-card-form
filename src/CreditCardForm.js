@@ -102,7 +102,6 @@ class CreditCardForm extends Component {
         let formattedNum = num.replace(/ /g,'');
         return formattedNum.slice(0,4)+" "+formattedNum.slice(4,8)+" "+formattedNum.slice(8,12)+" "+formattedNum.slice(12,16);
       }
-      console.log(card.number);
     } else if(cardNumber[0]+cardNumber[1]==="34" || cardNumber[0]+cardNumber[1]==="37"){
       card.type = "AmEx";
       card.cvv2 = 4;
@@ -112,7 +111,6 @@ class CreditCardForm extends Component {
         let formattedNum = num.replace(/ /g,'');
         return formattedNum.slice(0,4)+" "+formattedNum.slice(4,10)+" "+formattedNum.slice(10,15);
       }
-      console.log(card.number);
     } else {
       card.type = "other";
       card.cvv2 = 3;
@@ -215,7 +213,6 @@ class CreditCardForm extends Component {
                 value={this.state.form.cvv2}
                 onChange={(e) => this.handleInput(e, "cvv2")}
                 onBlur={(e)=> this.validateTypeOnBlur(e, "cvv2")}
-                maxLength="3"
               />
               <div className="validation-feedback">{this.state.feedback.cvv2}</div>
             </div>
@@ -230,7 +227,6 @@ class CreditCardForm extends Component {
                 value={this.state.form.expMonth}
                 onChange={(e) => this.handleInput(e, "expMonth")}
                 onBlur={(e)=> this.validateTypeOnBlur(e, "expMonth")}
-                maxLength="2"
               />
               <div className="validation-feedback">{this.state.feedback.expMonth}</div>
             </div>
@@ -245,8 +241,6 @@ class CreditCardForm extends Component {
                 value={this.state.form.expYear}
                 onChange={(e) => this.handleInput(e, "expYear")}
                 onBlur={(e)=> this.validateTypeOnBlur(e, "expYear")}
-
-                maxLength="2"
               />
               <div className="validation-feedback">{this.state.feedback.expYear}</div>
             </div>
