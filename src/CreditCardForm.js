@@ -131,7 +131,8 @@ class CreditCardForm extends Component {
 
     switch (field) {
       case "cardNumber":
-          newForm[field] = input.slice(0, card.characters);
+          let numbersOnly = input.replace(/[^.0-9\s]/g, '');
+          newForm[field] = numbersOnly.slice(0, card.characters);
         break;
       case "cvv2":
         newForm[field] = input.slice(0, card.cvv2);
