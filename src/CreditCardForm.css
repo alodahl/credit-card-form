@@ -1,0 +1,91 @@
+:root {
+  --defaultfont: 22px "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+  --border: 1px solid #ccc;
+  --lightgray: #EEE;
+  --gray: #1e1e1e;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.credit-card-form {
+  width: 450px;
+  margin: 100px auto;
+  padding: 30px;
+  font: var(--defaultfont);
+  background-color: #eee;
+  border: var(--border);
+  border-radius: 10px;
+}
+
+.form-header {
+  font-weight: 300;
+}
+
+.form-inputs-div {
+  width: 250px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.form-input-wrapper {
+  margin: 5px 0;
+  width: 100%;
+}
+
+.form-input {
+  display: block;
+  margin: 0;
+  height: 35px;
+  border: var(--border);
+  border-radius: 3px;
+  font-size: 18px;
+  position: relative;
+}
+
+.block{
+  width: 100%;
+}
+
+.inline{
+  display: inline-block;
+  width: 115px; /*leaves 20px between the 2 inline inputs*/
+}
+
+.form-input--left {
+  float: left;
+}
+
+.form-input--right {
+  float: right;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.validation-feedback {
+  font: 12px Courier;
+  color: red;
+  height: 15px;
+}
+
+.credit-card-photo {
+  width: 100%;
+}
+
+.submit-button {
+  padding: 10px 100px;
+  margin: 20px;
+  border: var(--border);
+  border-radius: 10px;
+  font: var(--defaultfont);
+  font-size: 24px;
+  /* font-weight: 600; */
+}
